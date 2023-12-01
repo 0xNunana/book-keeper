@@ -17,7 +17,7 @@ export default async function Home() {
   return (
     <main className='max-w-[720px] mx-auto'>
       <nav className="flex justify-between">
-        <h1 className='font-bold'>Books on Redis!</h1>
+        <h1 className='font-bold'>Books Available</h1>
         <Link href="/create" className="bg-rose-500 text-white p-2 rounded-sm text-xs">Add a new book</Link>
       </nav>
        {books.map((book)=>(
@@ -25,12 +25,12 @@ export default async function Home() {
           <h2 className='mb-0 font-bold'>{book.title}</h2>
           <p className='lowercase text-xs font-bold text-gray-500;
       font-variant: small-caps'>By {book.author}</p>
-          <p className='mb-2 text-sm text-gray-500'>{book.blurb}</p>
+          <p className='py-2 text-sm text-gray-500'>{book.blurb}</p>
           <p className='mb-2 text-sm text-gray-500'>Rating: {book.rating}</p>
         </div>
       ))}  
       
-      <p className='mb-2 text-sm text-gray-500;'>List of books here.</p>
+    
     </main>
   )
 }
